@@ -1,0 +1,23 @@
+@import "layout";
+@import "components";
+
+body {
+    background-image: linear-gradient($gradient_light);
+    color: $dark-grayish-red;
+    font-family: $font-main;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    min-height: 100vh;
+    min-width: 350px;
+    width: 100%;
+}
+
+::-moz-selection {
+    background: $dark-grayish-red;
+    color: white;
+}
+
+::selection {
+    background: $dark-grayish-red;
+    color: white;
+}

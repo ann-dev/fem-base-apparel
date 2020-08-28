@@ -1,0 +1,103 @@
+@import "variables";
+@import "mixins";
+
+@supports (-webkit-appearance: none) or (-moz-appearance: none) {
+    input,
+    button {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+    }
+}
+
+input,
+button {
+    border-radius: 2rem;
+    height: 3.5rem;
+    outline: none;
+    transition: all 0.2s ease-in;
+    @include mquery-phones {
+        border-radius: 30px;
+        height: 3rem;
+    }
+}
+
+form {
+    position: relative;
+}
+
+input,
+input::placeholder {
+    color: $desaturated-red;
+    font-family: $font-main !important;
+    font-size: $font-size_main;
+    @include mquery-phones {
+        font-size: 0.9rem;
+    }
+    @include mquery-ipadPro {
+        font-size: 1.15rem;
+    }
+}
+
+input {
+    background-color: transparent;
+    border: 1px solid hsla(0, 36%, 70%, 0.5);
+    color: $dark-grayish-red;
+    padding-left: 2em;
+    padding-top: 0.3em;
+    width: 27rem;
+    z-index: -1;
+    @include mquery-phones {
+        padding-left: 1.5em;
+        width: 90%;
+    }
+    @include mquery-verySmallDesktops {
+        width: 90%;
+    }
+}
+
+.input-error {
+    border: 2px solid $soft-red;
+}
+
+button {
+    background-image: linear-gradient($gradient_main);
+    box-shadow: 0 0.8rem 1rem rgba(206, 151, 151, 0.4);
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-size: 0.8rem;
+    padding: 0;
+    position: absolute;
+    right: 0;
+    width: 6.5rem;
+    transition: background-image 0.5s easy-in;
+    top: 0;
+    @include mquery-verySmallDesktops {
+        right: 1.5rem;
+    }
+    @include mquery-phones {
+        right: 2rem;
+        width: 4rem;
+    }
+    @include mquery-tablets {
+        right: 1rem;
+        width: 5rem;
+    }
+    @include mquery-ipadPro {
+        right: -7.5rem;
+    }
+    &:hover {
+        background-image: linear-gradient($gradient_med);
+    }
+    &:focus {
+        transform: scale(1.1);
+    }
+}
+
+#error {
+    color: $soft-red;
+    display: block;
+    font-size: 0.9rem;
+    margin-left: 2.2em;
+    margin-top: 1em;
+}
