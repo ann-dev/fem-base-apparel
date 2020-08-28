@@ -2,7 +2,7 @@
 
 ![preview](./preview.png)
 
-<h3 align="center"><a href="https://ann-dev.github.io/fem-base-apparel/" target="_blank">✨ Live Demo</a></h3>
+<h2 align="center"><a href="https://ann-dev.github.io/fem-base-apparel/" target="_blank">✨ Live Demo</a></h3>
 
 <p align="center">
   <img alt="last commit badge" src="https://img.shields.io/github/last-commit/ann-dev/fem-base-apparel?style=flat-square">
@@ -14,13 +14,13 @@ My solution for one of challenges for
   <a href="https://www.frontendmentor.io/profile/ann-dev">frontendmentor.io</a>
 </p>
 
-### Install
+## Install
 
 ```sh
 npm install
 ```
 
-### Usage
+## Usage
 
 To run the app use:
 
@@ -34,11 +34,11 @@ For compiling SCSS (live) use:
 npm watch:scss
 ```
 
-### Show your support
+## Show your support
 
 Give a ⭐️ if this project helped you!
 
-### 📝 License
+## 📝 License
 
 Copyright © 2020 [ann-dev](https://github.com/ann-dev).
 
