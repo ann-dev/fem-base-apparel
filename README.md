@@ -1,4 +1,4 @@
-<h1 align="center">fem-base-apparel</h1>
+<h1 align="center">Base Apparel coming soon page</h1>
 
 ![preview](./preview.png)
 
