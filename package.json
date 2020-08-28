@@ -1,27 +1,27 @@
 {
-  "name": "base-apparel-coming-soon",
-  "version": "1.0.0",
-  "description": "frontend-masters project solution",
-  "main": "index.js",
-  "scripts": {
-    "build:scss": "node-sass --output-style compressed -o dist/styles src/styles",
-    "start": "browser-sync -s -f './index.html, dist/**/*, src/**/*'",
-    "watch:all": "parallelshell 'npm start' 'npm run watch:scss'",
-    "watch:scss": "onchange -i -v 'src/styles/**/*' -- npm run build:scss"
-  },
-  "author": "ann-dev",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/ann-dev/frontend-mentor-challenges.git"
-  },
-  "license": "ISC",
-  "devDependencies": {
-    "browser-sync": "^2.26.7",
-    "node-sass": "^4.14.1",
-    "onchange": "^6.1.0",
-    "parallelshell": "^3.0.1",
-    "prettier": "2.0.4",
-    "sass-rem": "^2.0.1"
-  },
-  "dependencies": {}
+    "name": "fem-base-apparel",
+    "version": "1.0.0",
+    "description": "Responsive page design challenge: example landing page",
+    "main": "index.js",
+    "scripts": {
+        "build:scss": "node-sass --output-style compressed -o dist/styles src/styles",
+        "start": "browser-sync -s -f './index.html, dist/**/*, src/**/*'",
+        "watch:all": "parallelshell 'npm start' 'npm run watch:scss'",
+        "watch:scss": "onchange -i -v 'src/styles/**/*' -- npm run build:scss"
+    },
+    "author": "ann-dev",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/ann-dev/frontend-mentor-challenges.git"
+    },
+    "license": "ISC",
+    "devDependencies": {
+        "browser-sync": "^2.26.7",
+        "node-sass": "^4.14.1",
+        "onchange": "^6.1.0",
+        "parallelshell": "^3.0.1",
+        "prettier": "2.0.4",
+        "sass-rem": "^2.0.1"
+    },
+    "dependencies": {}
 }
