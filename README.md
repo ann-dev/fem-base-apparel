@@ -34,12 +34,6 @@ For compiling SCSS (live) use:
 npm watch:scss
 ```
 
-### Show your support
+### Credits
 
-Give a ⭐️ if this project helped you!
-
-### 📝 License
-
-Copyright © 2020 [ann-dev](https://github.com/ann-dev).
-
-This project is [MIT](https://github.com/ann-dev/frontend-mentor-challenges/blob/master/LICENSE) licensed.
+Designed by [Frontend Mentor Team](https://www.frontendmentor.io/). Code written by [ann-dev](https://github.com/ann-dev).
