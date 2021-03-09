@@ -1,6 +1,6 @@
 <h1 align="center">Base Apparel coming soon page</h1>
 
-![preview](./preview.png)
+![preview](./preview.jpg)
 
 <h3 align="center"><a href="https://ann-dev.github.io/fem-base-apparel/" target="_blank">✨ Live Demo</a></h3>
 
