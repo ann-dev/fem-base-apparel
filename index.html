@@ -1,62 +1,80 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- displays site properly based on user's device -->
 
-    <link rel="icon" type="image/png" sizes="32x32" href="./src/images/favicon-32x32.png">
-    <link rel="stylesheet" type="text/css" href="dist/styles/index.css">
-    <link rel="stylesheet" type="text/css" href="https://use.fontawesome.com/releases/v5.0.7/css/all.css">
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./src/images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" type="text/css" href="dist/styles/index.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://use.fontawesome.com/releases/v5.0.7/css/all.css"
+    />
     <title>Frontend Mentor | Base Apparel coming soon page</title>
-</head>
-<body>
+  </head>
+  <body>
+    <!-- MAIN CONTENT: START-->
+    <div class="coming-soon">
+      <header class="margin-left">
+        <img src="./src/images/logo.svg" alt="company logo" />
+      </header>
 
-<!-- MAIN CONTENT: START-->
-<div class="coming-soon">
-
-    <header class="margin-left">
-        <img src="./src/images/logo.svg" alt="company logo">
-    </header>
-
-    <main>
+      <main>
         <div class="hero-mobile"></div>
         <div class="page-content">
-            <h1>
-                <span class="header-light">We're</span>coming<br> soon
-            </h1>
-            <p>
-                Hello fellow shoppers! We're currently building our new fashion store.
-                Add your email below to stay up-to-date with announcements and our launch deals.
-            </p>
+          <h1>
+            <span class="header-light">We're</span>coming<br />
+            soon
+          </h1>
+          <p>
+            Hello fellow shoppers! We're currently building our new fashion
+            store. Add your email below to stay up-to-date with announcements
+            and our launch deals.
+          </p>
 
-            <form action="/" method="GET">
-                <label for="email">
-                    <input class="email" id="email" type="text" placeholder="Email Address">
-                </label>
-                <button type="submit" aria-label="Submit email address">
-                    <i class="fa fa-chevron-right fa-2x" style="font-weight:900" aria-hidden="true"></i>
-                    <span class="sr-only">Submit</span>
-                </button>
-                <span id="error"></span>
-            </form>
+          <form action="/" method="POST">
+            <input
+              class="email"
+              id="email"
+              type="text"
+              placeholder="Email Address"
+            />
+            <button type="submit" aria-label="Submit email address">
+              <i class="fa fa-chevron-right fa-2x" aria-hidden="true"></i>
+              <span class="sr-only">Submit</span>
+            </button>
+            <span id="error"></span>
+          </form>
         </div>
+      </main>
 
-    </main>
-
-    <footer>
+      <footer>
         <p>
-            Challenge by <a rel="noopener" href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>
-            <br>
-            Coded by <a rel="noopener" href="https://github.com/ann-dev">ann-dev</a>.
+          Challenge by
+          <a
+            rel="noopener"
+            href="https://www.frontendmentor.io?ref=challenge"
+            target="_blank"
+            >Frontend Mentor</a
+          >
+          <br />
+          Coded by
+          <a rel="noopener" href="https://github.com/ann-dev">ann-dev</a>.
         </p>
-    </footer>
-</div>
-<!-- MAIN CONTENT: END-->
+      </footer>
+    </div>
+    <!-- MAIN CONTENT: END-->
 
-<!-- SIDE IMAGE: START-->
-<div class="side-image"></div>
-<!-- SIDE IMAGE: END-->
-<script src="src/js/scripts.js"></script>
-</body>
+    <!-- SIDE IMAGE: START-->
+    <div class="side-image"></div>
+    <!-- SIDE IMAGE: END-->
+    <script src="src/js/scripts.js"></script>
+  </body>
 </html>

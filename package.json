@@ -1,27 +1,29 @@
 {
-    "name": "fem-base-apparel",
-    "version": "1.1.1",
-    "description": "Responsive page design challenge: example landing page",
-    "main": "index.js",
-    "scripts": {
-        "build:scss": "sass --style=compressed src/styles:dist/styles",
-        "start": "browser-sync -s -f './index.html, dist/**/*, src/**/*'",
-        "watch:all": "concurrently 'npm start' 'npm run watch:scss'",
-        "watch:scss": "onchange -i -v 'src/styles/**/*' -- npm run build:scss"
-    },
-    "author": "ann-dev",
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/ann-dev/frontend-mentor-challenges.git"
-    },
-    "license": "ISC",
-    "devDependencies": {
-        "browser-sync": "^3.0.4",
-        "concurrently": "^9.2.1",
-        "onchange": "^7.1.0",
-        "prettier": "^3.6.2",
-        "sass": "^1.91.0",
-        "sass-rem": "^4.0.0"
-    },
-    "dependencies": {}
+  "name": "fem-base-apparel",
+  "version": "1.1.1",
+  "description": "Responsive page design challenge: example landing page",
+  "main": "index.js",
+  "scripts": {
+    "build:scss": "sass --style=compressed src/styles:dist/styles",
+    "start": "browser-sync -s -f './index.html, dist/**/*, src/**/*'",
+    "watch:all": "concurrently 'npm start' 'npm run watch:scss'",
+    "watch:scss": "onchange -i -v 'src/styles/**/*' -- npm run build:scss",
+    "format": "prettier --write .",
+    "format:check": "prettier --check ."
+  },
+  "author": "ann-dev",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ann-dev/frontend-mentor-challenges.git"
+  },
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^3.0.4",
+    "concurrently": "^9.2.1",
+    "onchange": "^7.1.0",
+    "prettier": "^3.6.2",
+    "sass": "^1.91.0",
+    "sass-rem": "^4.0.0"
+  },
+  "dependencies": {}
 }
