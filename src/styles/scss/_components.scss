@@ -15,6 +15,11 @@ button {
   height: 3.5rem;
   outline: none;
   transition: all 0.2s ease-in;
+  
+  @media (prefers-reduced-motion: reduce) {
+    transition: none;
+  }
+  
   @include mixins.mquery-phones {
     border-radius: 30px;
     height: 3rem;
@@ -28,7 +33,7 @@ form {
 input,
 input::placeholder {
   color: variables.$desaturated-red;
-  font-family: variables.$font-main !important;
+  font-family: variables.$font-main;
   font-size: variables.$font-size_main;
   @include mixins.mquery-phones {
     font-size: 0.9rem;
@@ -41,6 +46,9 @@ input::placeholder {
 input {
   background-color: transparent;
   border: 1px solid hsla(0, 36%, 70%, 0.5);
+  background-size: 1.5rem;
+  background-repeat: no-repeat;
+  background-position: calc(100% - 6.5rem) 50%;
   color: variables.$dark-grayish-red;
   padding-left: 2em;
   padding-top: 0.3em;
@@ -49,6 +57,7 @@ input {
   @include mixins.mquery-phones {
     padding-left: 1.5em;
     width: 90%;
+    background-position: calc(100% - 4rem) 50%;
   }
   @include mixins.mquery-verySmallDesktops {
     width: 90%;
@@ -57,6 +66,7 @@ input {
 
 .input-error {
   border: 2px solid variables.$soft-red;
+  background-image: url('../../src/images/icon-error.svg');
 }
 
 button {
@@ -70,8 +80,13 @@ button {
   position: absolute;
   right: 0;
   width: 6.5rem;
-  transition: background-image 0.5s easy-in;
+  transition: background-image 0.5s ease-in;
   top: 0;
+  
+  @media (prefers-reduced-motion: reduce) {
+    transition: none;
+  }
+  
   @include mixins.mquery-verySmallDesktops {
     right: 1.5rem;
   }
@@ -98,7 +113,7 @@ button i {
   font-weight: 900;
 }
 
-#error {
+.error-message {
   color: variables.$soft-red;
   display: block;
   font-size: 0.9rem;

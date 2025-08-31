@@ -11,7 +11,7 @@
     event => {
       event.preventDefault();
 
-      let isValid = validateEmail(emailInput.value);
+      const isValid = validateEmail(emailInput.value);
 
       if (isValid) {
         emailInput.classList.remove('input-error');
@@ -19,10 +19,6 @@
         alert('Email submitted');
       } else {
         emailInput.classList.add('input-error');
-        emailInput.style.backgroundImage = 'url(src/images/icon-error.svg)';
-        emailInput.style.backgroundRepeat = 'no-repeat';
-        emailInput.style.backgroundPosition = '75% 50%';
-
         errorMessage.innerHTML = 'Please provide a valid email';
 
         emailInput.focus();

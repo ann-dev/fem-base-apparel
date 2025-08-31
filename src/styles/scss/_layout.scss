@@ -15,8 +15,12 @@ body {
     flex-wrap: wrap;
   }
   @include mixins.mquery-verySmallDesktops {
-    min-width: 300px;
+    min-width: 18.75rem;
   }
+}
+
+p {
+  color: variables.$desaturated-red;
 }
 
 .coming-soon,
@@ -40,10 +44,6 @@ body {
   @include mixins.mquery-tablets {
     width: 100%;
   }
-}
-
-p {
-  color: variables.$desaturated-red;
 }
 
 /* II. COMING SOON: MAIN CONTENT
@@ -184,6 +184,11 @@ footer {
     }
     a {
       transition: all 0.2s ease-in;
+      
+      @media (prefers-reduced-motion: reduce) {
+        transition: none;
+      }
+
       &:hover {
         color: variables.$dark-grayish-red;
       }

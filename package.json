@@ -1,12 +1,12 @@
 {
   "name": "fem-base-apparel",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "Responsive page design challenge: example landing page",
   "main": "index.js",
   "scripts": {
     "build:scss": "sass --style=compressed src/styles:dist/styles",
-    "start": "browser-sync -s -f './index.html, dist/**/*, src/**/*'",
-    "watch:all": "concurrently 'npm start' 'npm run watch:scss'",
+    "browser-sync": "browser-sync -s -f './index.html, dist/**/*, src/**/*'",
+    "dev": "concurrently 'npm run browser-sync' 'npm run watch:scss'",
     "watch:scss": "onchange -i -v 'src/styles/**/*' -- npm run build:scss",
     "format": "prettier --write .",
     "format:check": "prettier --check ."
