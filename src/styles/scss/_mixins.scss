@@ -1,35 +1,5 @@
-@mixin mquery-phones {
-  @media only screen and (max-width: 48rem) and (-webkit-min-device-pixel-ratio: 2) {
-    @content;
-  }
-}
-
-@mixin mquery-tablets {
-  @media only screen and (min-width: 48rem) and (max-width: 64rem) and (-webkit-min-device-pixel-ratio: 1.5) {
-    @content;
-  }
-}
-
-@mixin mquery-ipadPro {
-  @media only screen and (min-width: 50rem) and (max-height: 85.375rem) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 1.5) {
-    @content;
-  }
-}
-
-@mixin mquery-ipadPro-land {
-  @media only screen and (min-width: 50rem) and (max-height: 85.375rem) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 1.5) {
-    @content;
-  }
-}
-
-@mixin mquery-smallDesktops {
-  @media (max-width: 75rem) {
-    @content;
-  }
-}
-
-@mixin mquery-verySmallDesktops {
-  @media (max-width: 37.5rem) {
+@mixin mobile {
+  @media only screen and (max-width: 74.9375rem) {
     @content;
   }
 }
