@@ -1,103 +1,122 @@
-@use "variables";
-@use "mixins";
+@use 'variables';
+@use 'mixins';
 
 @supports (-webkit-appearance: none) or (-moz-appearance: none) {
-    input,
-    button {
-        -webkit-appearance: none;
-        -moz-appearance: none;
-    }
+  input,
+  button {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+  }
 }
 
 input,
 button {
-    border-radius: 2rem;
-    height: 3.5rem;
-    outline: none;
-    transition: all 0.2s ease-in;
-    @include mixins.mquery-phones {
-        border-radius: 30px;
-        height: 3rem;
-    }
+  border-radius: 2rem;
+  height: 3.5rem;
+  outline: none;
+  transition: all 0.2s ease-in;
+  
+  @media (prefers-reduced-motion: reduce) {
+    transition: none;
+  }
+  
+  @include mixins.mquery-phones {
+    border-radius: 30px;
+    height: 3rem;
+  }
 }
 
 form {
-    position: relative;
+  position: relative;
 }
 
 input,
 input::placeholder {
-    color: variables.$desaturated-red;
-    font-family: variables.$font-main !important;
-    font-size: variables.$font-size_main;
-    @include mixins.mquery-phones {
-        font-size: 0.9rem;
-    }
-    @include mixins.mquery-ipadPro {
-        font-size: 1.15rem;
-    }
+  color: variables.$desaturated-red;
+  font-family: variables.$font-main;
+  font-size: variables.$font-size_main;
+  @include mixins.mquery-phones {
+    font-size: 0.9rem;
+  }
+  @include mixins.mquery-ipadPro {
+    font-size: 1.15rem;
+  }
 }
 
 input {
-    background-color: transparent;
-    border: 1px solid hsla(0, 36%, 70%, 0.5);
-    color: variables.$dark-grayish-red;
-    padding-left: 2em;
-    padding-top: 0.3em;
-    width: 27rem;
-    z-index: -1;
-    @include mixins.mquery-phones {
-        padding-left: 1.5em;
-        width: 90%;
-    }
-    @include mixins.mquery-verySmallDesktops {
-        width: 90%;
-    }
+  background-color: transparent;
+  border: 1px solid hsla(0, 36%, 70%, 0.5);
+  background-size: 1.5rem;
+  background-repeat: no-repeat;
+  background-position: calc(100% - 6.5rem) 50%;
+  color: variables.$dark-grayish-red;
+  padding-left: 2em;
+  padding-top: 0.3em;
+  width: 27rem;
+  z-index: -1;
+  @include mixins.mquery-phones {
+    padding-left: 1.5em;
+    width: 90%;
+    background-position: calc(100% - 4rem) 50%;
+  }
+  @include mixins.mquery-verySmallDesktops {
+    width: 90%;
+  }
 }
 
 .input-error {
-    border: 2px solid variables.$soft-red;
+  border: 2px solid variables.$soft-red;
+  background-image: url('../../src/images/icon-error.svg');
 }
 
 button {
-    background-image: linear-gradient(variables.$gradient_main);
-    box-shadow: 0 0.8rem 1rem rgba(206, 151, 151, 0.4);
-    border: none;
-    color: white;
-    cursor: pointer;
-    font-size: 0.8rem;
-    padding: 0;
-    position: absolute;
-    right: 0;
-    width: 6.5rem;
-    transition: background-image 0.5s easy-in;
-    top: 0;
-    @include mixins.mquery-verySmallDesktops {
-        right: 1.5rem;
-    }
-    @include mixins.mquery-phones {
-        right: 2rem;
-        width: 4rem;
-    }
-    @include mixins.mquery-tablets {
-        right: 1rem;
-        width: 5rem;
-    }
-    @include mixins.mquery-ipadPro {
-        right: -7.5rem;
-    }
-    &:hover {
-        background-image: linear-gradient(variables.$gradient_med);
-    }
-    &:focus {
-        transform: scale(1.1);
-    }
+  background-image: linear-gradient(variables.$gradient_main);
+  box-shadow: 0 0.8rem 1rem rgba(206, 151, 151, 0.4);
+  border: none;
+  color: white;
+  cursor: pointer;
+  font-size: 0.8rem;
+  padding: 0;
+  position: absolute;
+  right: 0;
+  width: 6.5rem;
+  transition: background-image 0.5s ease-in;
+  top: 0;
+  
+  @media (prefers-reduced-motion: reduce) {
+    transition: none;
+  }
+  
+  @include mixins.mquery-verySmallDesktops {
+    right: 1.5rem;
+  }
+  @include mixins.mquery-phones {
+    right: 2rem;
+    width: 4rem;
+  }
+  @include mixins.mquery-tablets {
+    right: 1rem;
+    width: 5rem;
+  }
+  @include mixins.mquery-ipadPro {
+    right: -7.5rem;
+  }
+  &:hover {
+    background-image: linear-gradient(variables.$gradient_med);
+  }
+  &:focus {
+    transform: scale(1.1);
+  }
 }
 
-#error {
-    color: variables.$soft-red;
-    display: block;
-    font-size: 0.9rem;
-    margin-left: 2.2em;
-    margin-top: 1em;
+button i {
+  font-weight: 900;
+}
+
+.error-message {
+  color: variables.$soft-red;
+  display: block;
+  font-size: 0.9rem;
+  margin-left: 2.2em;
+  margin-top: 1em;
 }
