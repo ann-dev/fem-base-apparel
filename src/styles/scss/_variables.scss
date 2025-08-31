@@ -6,6 +6,12 @@ $soft-red: hsl(0, 93%, 68%);
 /* Ib. COLORS: NEUTRAL
    ========================================================================== */
 $dark-grayish-red: hsl(0, 6%, 24%);
+$white: hsl(0, 100%, 100%);
+
+/* Ic. COLORS: BORDERS & SHADOWS
+   ========================================================================== */
+$input-border: hsla(0, 36%, 70%, 0.5);
+$button-shadow: rgba(206, 151, 151, 0.4);
 
 /* II. GRADIENTS
    ========================================================================== */
@@ -16,5 +22,5 @@ $gradient_main: 135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%);
 /* III. FONTS
    ========================================================================== */
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap');
-$font-size_main: 16px;
+$font-size_main: 1rem;
 $font-main: 'Josefin Sans', sans-serif;

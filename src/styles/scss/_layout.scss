@@ -5,17 +5,13 @@
    ========================================================================== */
 body {
   display: flex;
-  @include mixins.mquery-phones {
+  min-width: 18.75rem;
+  @include mixins.mobile {
     flex-direction: column;
     flex-wrap: wrap;
     max-width: 100vw;
-  }
-  @include mixins.mquery-tablets {
-    height: 100vh;
-    flex-wrap: wrap;
-  }
-  @include mixins.mquery-verySmallDesktops {
-    min-width: 18.75rem;
+    min-width: auto;
+    overflow-x: hidden;
   }
 }
 
@@ -28,20 +24,9 @@ p {
   background-size: cover;
   background-repeat: no-repeat;
   height: 100vh;
-  @include mixins.mquery-verySmallDesktops {
+  @include mixins.mobile {
     height: 100%;
     min-height: 100vh;
-    width: 100%;
-  }
-  @include mixins.mquery-smallDesktops {
-    height: 100%;
-    min-height: 100vh;
-    width: 100%;
-  }
-  @include mixins.mquery-phones {
-    height: 100%;
-  }
-  @include mixins.mquery-tablets {
     width: 100%;
   }
 }
@@ -54,31 +39,10 @@ p {
   flex-direction: column;
   padding-left: 10.3rem;
   width: 57.55vw;
-  @include mixins.mquery-smallDesktops {
-    padding-left: 4rem;
-    width: 100%;
-  }
-  @include mixins.mquery-verySmallDesktops {
+  @include mixins.mobile {
     padding: 0 2rem;
     width: 100%;
-  }
-  @include mixins.mquery-phones {
-    padding: 0;
-    padding-left: 0;
-    width: 100%;
-  }
-  @include mixins.mquery-ipadPro {
-    padding-left: 4rem;
-  }
-  header {
-    margin-top: 4rem;
-    width: 10rem;
-    @include mixins.mquery-phones {
-      margin-left: 2.05rem;
-      margin-top: 2rem;
-      width: 6.2rem;
-    }
-    @include mixins.mquery-verySmallDesktops {
+    header {
       margin-top: 2rem;
       width: 7.5rem;
     }
@@ -88,11 +52,7 @@ p {
 main {
   margin-top: 8rem;
   width: 28rem;
-  @include mixins.mquery-verySmallDesktops {
-    margin-top: 6rem;
-    width: 100%;
-  }
-  @include mixins.mquery-phones {
+  @include mixins.mobile {
     height: auto;
     margin-top: 1.65rem;
     width: 100%;
@@ -103,7 +63,7 @@ main {
   background-image: url('../../src/images/hero-mobile.jpg');
   display: none;
   width: 100%;
-  @include mixins.mquery-phones {
+  @include mixins.mobile {
     background-size: cover;
     display: block;
     height: 15.6rem;
@@ -111,24 +71,13 @@ main {
 }
 
 .page-content {
-  @include mixins.mquery-tablets {
-    margin: 0 auto;
-    text-align: left;
-    width: 70%;
-  }
-  @include mixins.mquery-ipadPro {
-    margin: 0;
-  }
   h1 {
     font-size: 4rem;
     font-weight: 700;
     letter-spacing: 0.27em;
     line-height: 1.1em;
     text-transform: uppercase;
-    @include mixins.mquery-verySmallDesktops {
-      font-size: 3rem;
-    }
-    @include mixins.mquery-phones {
+    @include mixins.mobile {
       font-size: 2.5rem;
       line-height: 1.05em;
       margin: 4rem 0 0;
@@ -139,24 +88,12 @@ main {
     line-height: 1.75em;
     margin-top: 1.1rem;
     width: 100%;
-    @include mixins.mquery-phones {
-      font-size: 0.89rem;
+    @include mixins.mobile {
+      font-size: 0.9rem;
       line-height: 1.3rem;
       margin: 1rem auto auto;
       text-align: center;
-      width: 80%;
-    }
-    @include mixins.mquery-ipadPro {
-      font-size: 1.15rem;
-      margin: 3rem auto;
-      width: 130%;
-    }
-  }
-  form {
-    margin-top: 2.5rem;
-    @include mixins.mquery-phones {
-      margin-left: 2.05rem;
-      margin-top: 2.3rem;
+      width: 90%;
     }
   }
 }
@@ -165,23 +102,17 @@ main {
   color: variables.$desaturated-red;
   display: block;
   font-weight: 300;
-  @include mixins.mquery-tablets {
-    margin-bottom: 0.15em;
-  }
 }
 
 footer {
   margin-top: 3.5rem;
-  @include mixins.mquery-phones {
-    margin: 2rem 2.05rem;
+  @include mixins.mobile {
+    margin: 2rem 1rem;
     text-align: center;
   }
   p {
     font-size: 0.9rem;
     line-height: 1.5em;
-    @include mixins.mquery-ipadPro {
-      font-size: 1.05rem;
-    }
     a {
       transition: all 0.2s ease-in;
       
@@ -202,16 +133,7 @@ footer {
 .side-image {
   background-image: url('../../src/images/hero-desktop.jpg');
   width: 42.45vw;
-  @include mixins.mquery-phones {
+  @include mixins.mobile {
     display: none;
-  }
-  @include mixins.mquery-smallDesktops {
-    display: none;
-  }
-  @include mixins.mquery-verySmallDesktops {
-    display: none;
-  }
-  @include mixins.mquery-ipadPro-land {
-    display: block;
   }
 }
