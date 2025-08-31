@@ -15,7 +15,8 @@
 
     if (isValid) {
       emailInput.classList.remove("input-error");
-      form.submit();
+      errorMessage.innerHTML = "";
+      alert("Email submitted");
     } else {
       emailInput.classList.add("input-error");
       emailInput.style.backgroundImage = 'url(src/images/icon-error.svg)';
