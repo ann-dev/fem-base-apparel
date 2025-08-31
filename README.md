@@ -6,7 +6,7 @@
 
 <p align="center">
   <img alt="last commit badge" src="https://img.shields.io/github/last-commit/ann-dev/fem-base-apparel?style=flat-square">
-  <img alt="code stack" src="https://img.shields.io/badge/tech_stack-HTML5, SCSS, NPM-ff69b4.svg?style=flat-square">
+  <img alt="code stack" src="https://img.shields.io/badge/tech_stack-HTML5, Sass, JS-ff69b4.svg?style=flat-square">
 </p>
 
 <p align="center">Responsive page design challenge: example landing page. <br />
@@ -22,16 +22,10 @@ npm install
 
 ### Usage
 
-To run the app use:
+To run the app and compile files use:
 
 ```sh
-npm run start
-```
-
-For compiling SCSS (live) use:
-
-```sh
-npm watch:scss
+npm run dev
 ```
 
 ### Credits
