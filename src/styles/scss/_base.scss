@@ -1,10 +1,11 @@
-@import "layout";
-@import "components";
+@use "layout";
+@use "components";
+@use "variables";
 
 body {
-    background-image: linear-gradient($gradient_light);
-    color: $dark-grayish-red;
-    font-family: $font-main;
+    background-image: linear-gradient(variables.$gradient_light);
+    color: variables.$dark-grayish-red;
+    font-family: variables.$font-main;
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
     min-height: 100vh;
@@ -13,11 +14,11 @@ body {
 }
 
 ::-moz-selection {
-    background: $dark-grayish-red;
+    background: variables.$dark-grayish-red;
     color: white;
 }
 
 ::selection {
-    background: $dark-grayish-red;
+    background: variables.$dark-grayish-red;
     color: white;
 }
